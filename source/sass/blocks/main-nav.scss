@@ -1,0 +1,25 @@
+.main-nav {
+  position: fixed;
+  width: 873px;
+  min-height: 62px;
+  left: calc(50% - 436px);
+  border-bottom: 1px solid rgba($basic-white,.2);
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}

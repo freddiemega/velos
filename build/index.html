@@ -1,13 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Велосипеды 2.0</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin="">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page-body">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo">
+        <img src="img/logo.svg" width="67" height="20" alt="Логотип Магазин велосипедов">
+      </div>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">О нас</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Виды велосипедов</span>
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Видео про велосипеды</span>
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Магазин по продаже велосипедов</h1>
+    <section class="slogan">
+
+    </section>
+  </main>
+  <footer>
+
+  </footer>
 </body>
 </html>
