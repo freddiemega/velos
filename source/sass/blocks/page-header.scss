@@ -6,4 +6,13 @@
   position: absolute;
   top: 312px;
   left: calc(50% - 440px);
+
+  @media (max-width: $tablet-width) {
+    top: 25px;
+    left: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 16px;
+  }
 }

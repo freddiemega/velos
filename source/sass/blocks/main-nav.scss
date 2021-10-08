@@ -4,10 +4,108 @@
   min-height: 62px;
   left: calc(50% - 436px);
   border-bottom: 1px solid rgba($basic-white,.2);
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    min-height: auto;
+    left: auto;
+    border-bottom: none;
+  }
 }
 
 .main-nav__toggle {
   display: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    cursor: pointer;
+    border: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 50px;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 18.5px;
+  left: 13.75px;
+  width: 22.5px;
+  height: 1px;
+  background-color: $basic-black;
+  box-shadow:
+    0 5.25px 0 0 $basic-black,
+    0 11px 0 0 $basic-black;
+
+  @media (max-width: $mobile-width) {
+    left: 14px;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  left: auto;
+  right: 0;
+  background-color: $basic-white;
+  z-index: 20;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 9px;
+    width: 33px;
+    height: 1px;
+    background-color: $special-gray-menu;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    min-height: 568px;
+    background-color: $basic-white;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    min-height: 568px;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: flex;
+  }
 }
 
 .main-nav__list {
@@ -17,7 +115,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
