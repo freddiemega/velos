@@ -121,6 +121,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;

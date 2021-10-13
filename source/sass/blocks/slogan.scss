@@ -165,12 +165,16 @@
   line-height: 24px;
   font-weight: 400;
   text-decoration: none;
-  color: $special-gray-form;
+  color: $basic-black;
   padding-top: 13px;
   padding-bottom: 9px;
   padding-left: 29px;
   padding-right: 29px;
   margin-bottom: 20px;
+
+  &::placeholder {
+    color: $special-gray-form;
+  }
 
   @media (max-width: $tablet-width) {
     width: 319px;

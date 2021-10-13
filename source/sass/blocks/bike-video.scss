@@ -1,0 +1,122 @@
+.bike-video {
+  margin: 0;
+  min-height: 706px;
+  width: 100%;
+  background: linear-gradient(to bottom, $basic-dark-gray 88%, $basic-white 88%);
+  margin-bottom: 150px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 413px;
+    margin-bottom: 70px;
+    background: linear-gradient(to bottom, $basic-dark-gray 83%, $basic-white 83%);
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: auto;
+    margin-bottom: 73px;
+    background: linear-gradient(to bottom, $basic-dark-gray 89%, $basic-white 89%);
+  }
+}
+
+.bike-video__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 120px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 70px;
+    width: 65.5%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 84px;
+    width: 90%;
+  }
+}
+
+.bike-video h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  color: $basic-white;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+
+  }
+}
+
+.bike-video p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  color: $basic-white;
+  opacity: 0.7;
+  max-width: 340px;
+  margin-bottom: 56px;
+  padding-left: 9px;
+  padding-right: 9px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 429px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.bike-video__inner {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.bike-video__inner img {
+  display: block;
+  width: 100%;
+}
+
+.bike-video__inner button {
+  width: 65px;
+  height: 65px;
+  background-image: url(../img/play-button.svg);
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    transform: scale(1.39);
+  }
+
+  @media (max-width: $mobile-width) {
+    transform: scale(1);
+  }
+}

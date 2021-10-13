@@ -7,12 +7,13 @@
   position: relative;
 
   @media (max-width: $tablet-width) {
+    min-height: auto;
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 15px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 52px;
+    padding-bottom: 57px;
   }
 }
 
@@ -38,13 +39,13 @@
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  padding-left: 157px;
-  padding-right: 157px;
+  padding-left: 60px;
+  padding-right: 60px;
   max-width: 1440px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: transparent;
 
   @media (max-width: $tablet-width) {
@@ -64,6 +65,8 @@
 
 .bicycles-types__wrapper li {
   flex-shrink: 1;
+  width: 29%;
+  max-width: 342px;
   margin-right: 50px;
   position: relative;
 
@@ -75,6 +78,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    max-width: none;
     margin: 0;
     margin-bottom: 40px;
   }
@@ -102,6 +106,12 @@
     @media (max-width: $tablet-width) {
       margin-right: auto;
       margin-top: 0;
+    }
+  }
+
+  &:last-child {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 0;
     }
   }
 
@@ -191,12 +201,6 @@
       right: -15px;
     }
   }
-}
-
-
-
-.bicycles-types__wrapper picture {
-
 }
 
 .bicycles-types__wrapper img {
