@@ -1,5 +1,5 @@
 .facts {
-
+  margin: 0;
 }
 
 .facts h2 {
@@ -8,7 +8,7 @@
   font-size: 30px;
   line-height: 30px;
   font-weight: 600;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   text-decoration: none;
   color: $special-black-heading;
   margin-top: 150px;
@@ -53,7 +53,7 @@
   font-size: 28px;
   line-height: 38px;
   font-weight: 700;
-  letter-spacing: -1.27273px;
+  letter-spacing: -1.27px;
   text-decoration: none;
   color: $basic-green;
   width: 25%;
@@ -63,7 +63,6 @@
   @media (max-width: $tablet-width) {
     width: 50%;
     margin-bottom: 20px;
-
   }
 
   @media (max-width: $mobile-width) {
