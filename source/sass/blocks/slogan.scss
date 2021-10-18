@@ -172,6 +172,14 @@
   padding-right: 29px;
   margin-bottom: 20px;
 
+  &:hover {
+    outline: 1px solid $basic-green;
+  }
+
+  &:focus {
+    outline: 1px solid $basic-green;
+  }
+
   &::placeholder {
     color: $special-gray-form;
   }
@@ -205,4 +213,22 @@
   cursor: pointer;
   min-height: 51px;
   width: 100%;
+
+  &:hover {
+    outline: 1px solid $basic-white;
+  }
+
+  &:focus {
+    outline: 1px solid $basic-white;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:hover {
+      outline: 1px solid $basic-black;
+    }
+
+    &:focus {
+      outline: 1px solid $basic-black;
+    }
+  }
 }
