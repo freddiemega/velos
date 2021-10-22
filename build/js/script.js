@@ -10,11 +10,11 @@ navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
-    document.body.style.overflow = "visible";
+    document.body.style.overflow = 'visible';
   }
 });
 
@@ -28,7 +28,7 @@ anchors.forEach(function (anchor) {
     if (navMain.classList.contains('main-nav--opened')) {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = 'visible';
     }
 
     var blockID = anchor.getAttribute('href').substr(1);
