@@ -108,11 +108,38 @@
   padding: 0;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    transform: scale(1.2);
+    outline: 1px dotted $basic-white;
+  }
+
   @media (max-width: $tablet-width) {
     transform: scale(1.39);
+
+    &:hover {
+      transform: scale(1.6);
+    }
+
+    &:focus {
+      transform: scale(1.6);
+      outline: 1px dotted $basic-white;
+    }
   }
 
   @media (max-width: $mobile-width) {
     transform: scale(1);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      transform: scale(1.2);
+      outline: 1px dotted $basic-white;
+    }
   }
 }

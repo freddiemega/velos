@@ -10,9 +10,11 @@ navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
+    document.body.style.overflow = 'hidden';
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
+    document.body.style.overflow = 'visible';
   }
 });
 
@@ -22,6 +24,12 @@ var anchors = document.querySelectorAll('a[href*="#"]');
 anchors.forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+
+    if (navMain.classList.contains('main-nav--opened')) {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+      document.body.style.overflow = 'visible';
+    }
 
     var blockID = anchor.getAttribute('href').substr(1);
 

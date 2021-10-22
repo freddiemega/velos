@@ -1,7 +1,8 @@
 .page-footer {
   margin: 0;
-  padding-bottom: 98px;
+  padding-bottom: 82px;
   text-align: center;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,6 +18,7 @@
   @media (max-width: $mobile-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 35px;
   }
 }
 
@@ -94,19 +96,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 22px;
-
-  @media (max-width: $tablet-width) {
-    margin-left: 25px;
-  }
+  flex-wrap: wrap;
+  width: 560px;
 
   @media (max-width: $mobile-width) {
+    width: 100%;
     flex-direction: column;
     margin-left: 0;
   }
 }
 
 .page-footer__inner a {
+  padding-left: 40px;
+  margin-bottom: 15px;
   position: relative;
   display: block;
   font-size: 16px;
@@ -116,14 +118,25 @@
   color: $basic-black;
   opacity: 0.5;
 
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:focus {
+    color: $basic-green;
+    outline: 1px dotted $basic-black;
+  }
+
   @media (max-width: $tablet-width) {
     line-height: 22px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
   }
 }
 
 .page-footer__email {
-  margin-right: 127px;
-
   &:focus {
     outline: 1px dotted $basic-black;
   }
@@ -133,12 +146,13 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 20px;
     padding-left: 46px;
   }
 }
 
 .page-footer__phone {
+  padding-right: 15px;
+
   &:focus {
     outline: 1px dotted $basic-black;
   }
@@ -151,7 +165,7 @@
 .page-footer__email svg {
   position: absolute;
   top: 3px;
-  left: -40px;
+  left: -2px;
 
   @media (max-width: $mobile-width) {
     left: 5px;
@@ -161,14 +175,10 @@
 .page-footer__phone svg {
   position: absolute;
   top: 0;
-  left: -37px;
+  left: 3px;
   fill: none;
 
-  @media (max-width: $tablet-width) {
-    left: -35px;
-  }
-
   @media (max-width: $mobile-width) {
-    left: -10px;
+    left: 3px;
   }
 }
